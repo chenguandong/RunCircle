@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4kr-NE-1pr">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="abJ-rV-CNd">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="400"/>
+                            </mapView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YRF-cy-68f">
+                                <rect key="frame" x="0.0" y="400" width="600" height="200"/>
+                                <color key="backgroundColor" red="0.82766203699999996" green="0.69965277780000001" blue="0.5652760604" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.827662037037037" green="0.69965277777777779" blue="0.56527606035925926" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="YRF-cy-68f" secondAttribute="trailing" id="95b-Un-cW3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="abJ-rV-CNd" secondAttribute="bottom" constant="200" id="AnQ-dm-sLX"/>
+                            <constraint firstItem="abJ-rV-CNd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="JPw-rV-qaK"/>
+                            <constraint firstItem="YRF-cy-68f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KQk-pt-QyE"/>
+                            <constraint firstAttribute="trailing" secondItem="abJ-rV-CNd" secondAttribute="trailing" id="T4t-7P-yDW"/>
+                            <constraint firstItem="YRF-cy-68f" firstAttribute="top" secondItem="abJ-rV-CNd" secondAttribute="bottom" id="llv-w9-SCX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YRF-cy-68f" secondAttribute="bottom" id="sAr-Tn-kd6"/>
+                            <constraint firstItem="abJ-rV-CNd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="v7Z-BS-oo6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="YFt-US-X8Q">
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="KF0-eF-4s9">
+                            <connections>
+                                <action selector="StopLocation:" destination="BYZ-38-t0r" id="dER-YT-uKd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="infoText" destination="YRF-cy-68f" id="ufy-8I-1Dv"/>
+                        <outlet property="mapView" destination="abJ-rV-CNd" id="UJi-SH-gKc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1322" y="252"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WTr-c9-7hx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4kr-NE-1pr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0OP-2b-yXH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="H5x-9X-unn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JhT-B3-DQ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="373" y="913"/>
+        </scene>
+    </scenes>
+</document>
